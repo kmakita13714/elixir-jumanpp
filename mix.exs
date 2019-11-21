@@ -8,7 +8,24 @@ defmodule Jumanpp.MixProject do
       elixir: "~> 1.2",
       build_embedded: Mix.env == :prod,
       start_permanent: Mix.env() == :prod,
+      description: description(),
+      package: package(),
       deps: deps()
+    ]
+  end
+
+  defp description do
+    """
+    Library for using JUMAN++ in Elixir.
+    """
+  end
+
+  defp package do
+    [
+      files: ["lib", "mix.exs", "README*", "LICENSE*"],
+      maintainers: ["Ko-ichi MAKITA"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/kmakita13714/elixir-jumanpp"}
     ]
   end
 
